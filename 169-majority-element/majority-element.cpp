@@ -1,18 +1,28 @@
 class Solution {
 public:
-// hash map 
+    // moore voting algorithm
     int majorityElement(vector<int>& nums) {
 
         int n = nums.size();
-
-        map<int, int> mp;
+        int elem, count = 0;
         for (int i = 0; i < n; i++) {
-            mp[nums[i]]++;
+            if (count == 0) {
+                count = 1;
+                elem = nums[i];
+            } else if (nums[i] == elem) {
+                count++;
+            } else
+                count--;
         }
-        for (auto it : mp) {
-            if (it.second > n / 2)
-                return it.first;
+
+        int cnt = 0;
+        for (int i = 0; i < n; i++) {
+            if (elem == nums[i])
+                cnt++;
         }
+        if (cnt > n/2)
+            return elem;
+
         return -1;
     }
 };
