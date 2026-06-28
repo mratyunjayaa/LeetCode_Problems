@@ -1,12 +1,17 @@
 class Solution {
 public:
+// bruteforce 
     int singleNumber(vector<int>& nums) {
-      
-       int x_or = 0 ;
-       for (int num : nums)
-       {
-        x_or ^= num ; 
-       }
-       return x_or ;    
+
+        for (int i = 0; i < nums.size(); i++) {
+            int cnt = 0;
+            for (int j = 0; j < nums.size(); j++) {
+                if (nums[i] == nums[j])
+                    cnt++;
+            }
+            if (cnt == 1)
+                return nums[i];
+        }
+        return -1;
     }
 };
