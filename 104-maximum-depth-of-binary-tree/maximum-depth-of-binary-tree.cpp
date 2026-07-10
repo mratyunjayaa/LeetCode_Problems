@@ -11,15 +11,10 @@
  * };
  */
 class Solution {
-    int dfs(TreeNode* root) {
-        if (root == nullptr)
-            return 0;
-
-        int left = dfs(root->left);
-        int right = dfs(root->right);
-        return 1 + max(left, right);
-    }
 
 public:
-    int maxDepth(TreeNode* root) { return dfs(root); }
+    int maxDepth(TreeNode* root) {
+        if(root == nullptr) return 0 ; 
+         return 1+ max(maxDepth(root->left) , maxDepth(root->right)); 
+         }
 };
