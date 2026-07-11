@@ -13,15 +13,6 @@ Welcome **LeetCode Solutions Repository**! This repository contains my daily sol
 
 Each folder corresponds to a LeetCode problem and contains its solution.
 
-Example:
-
-```text
-19-remove-nth-node-from-end-of-list/
-202-happy-number/
-258-add-digits/
-4135-concatenate-non-zero-digits-and-multiply-by-sum-i/
-...
-```
 
 ## 🧠 Topics Covered
 
