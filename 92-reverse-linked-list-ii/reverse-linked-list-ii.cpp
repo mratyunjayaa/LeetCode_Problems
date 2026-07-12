@@ -11,24 +11,34 @@
 class Solution {
 public:
     ListNode* reverseBetween(ListNode* head, int left, int right) {
-        //bruteforce 
-        if (left == 1 && right == 1)
+        if (head == nullptr)
             return head;
-        vector<int> ans;
+        if (left == right)
+            return head;
+
         ListNode* curr = head;
-        while (curr) {
-            ans.push_back(curr->val);
+        ListNode* prev = nullptr;
+        for (int i = 1; i < left; i++) {
+            prev = curr;
             curr = curr->next;
         }
-        reverse(ans.begin() + left - 1, ans.begin() + right);
+        ListNode* connection = prev;
+        ListNode* tail = curr;
+        ListNode* next = nullptr;
 
-        ListNode* newHead = new ListNode(ans[0]);
-        ListNode* tail = newHead;
-        for (int i = 1; i < ans.size(); i++) {
-            ListNode* temp = new ListNode(ans[i]);
-            tail->next = temp;
-            tail = tail->next;
+        for (int i = 0; i < right - left + 1; i++) {
+            next = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = next;
         }
-        return newHead;
+        if (connection != nullptr)
+            connection->next = prev;
+        else
+            head = prev;
+
+        tail->next = curr;
+
+        return head;
     }
 };
