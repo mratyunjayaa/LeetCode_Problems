@@ -11,6 +11,7 @@
 class Solution {
 public:
     ListNode* reverseBetween(ListNode* head, int left, int right) {
+        //bruteforce 
         if (left == 1 && right == 1)
             return head;
         vector<int> ans;
@@ -20,9 +21,6 @@ public:
             curr = curr->next;
         }
         reverse(ans.begin() + left - 1, ans.begin() + right);
-
-        if (ans.size() == 0)
-            return head;
 
         ListNode* newHead = new ListNode(ans[0]);
         ListNode* tail = newHead;
