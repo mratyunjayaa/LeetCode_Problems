@@ -1,19 +1,12 @@
 class Solution {
 public:
     vector<int> searchRange(vector<int>& nums, int target) {
-        // brute force
-        int first = -1, last = -1;
-        vector<int> ans;
-        for (int i = 0; i < nums.size(); i++) {
-            if (nums[i] == target) {
-                if (first == -1) {
-                    first = i;
-                }
-                last = i;
-            }
-        }
-        ans.push_back(first);
-        ans.push_back(last);
-        return ans;
+      vector<int>ans; 
+      auto lb = lower_bound(nums.begin() , nums.end() , target ) - nums.begin() ;  
+      auto ub = upper_bound(nums.begin() , nums.end() , target ) - nums.begin() ;  
+      if(lb==nums.size() || nums[lb]!=target) return {-1 , -1};
+    ans.push_back(lb);
+    ans.push_back(ub - 1);
+    return ans ;
     }
 };
