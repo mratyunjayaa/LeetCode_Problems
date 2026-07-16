@@ -2,7 +2,6 @@ class Solution {
 public:
     int findMin(vector<int>& arr) {
         int left = 0, right = arr.size() - 1, ans = INT_MAX;
-        if(arr.size()==1) return arr[left];
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if (arr[left] == arr[mid] && arr[mid] == arr[right]) {
