@@ -1,17 +1,20 @@
 class Solution {
 public:
     int mySqrt(int x) {
-        // brute Force 
+        // Optiamal Binary Search 
         if(x==0) return 0 ;
         long long ans = 1 ; 
-        for(long long  i = 1 ; i <= x ; i++){
-            if(i*i <= x){
-                ans = i ;
+        int low = 0 , high = x ;
+        while(low<=high){
+            long long mid = low + (high - low ) / 2 ;
+            long long val = mid * mid ;
+            if(val <= x){
+                low = mid + 1 ;
             }
             else{
-                break ;
+                high = mid -1 ;
             }
         }
-        return ans;
+        return high  ;
     }
 };
