@@ -6,7 +6,7 @@ Welcome **LeetCode Solutions Repository**! This repository contains my daily sol
 
 * 📅 Solving LeetCode problems regularly.
 * 💻 Solutions primarily in **C++**.
-* 🎯 Focused on writing clean, efficient, and optimized code.
+* 🎯 Focused on writing clean, efficient, and optimized code..
 * 📈 Tracking my progress and continuously improving my coding skills.
 
 ## 📂 Repository Structure
