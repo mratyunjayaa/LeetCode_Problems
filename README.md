@@ -34,7 +34,7 @@ This repository includes problems from various DSA topics, including:
 * Bit Manipulation
 * Math
 
-More topics will be added as I continue my journey.
+More topics will be added as I continue my journey
 
 ## 🎯 Goals
 
