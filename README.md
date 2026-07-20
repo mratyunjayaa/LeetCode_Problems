@@ -1,4 +1,4 @@
-# 🚀 LeetCode Problems
+ii# 🚀 LeetCode Problems
 
 Welcome **LeetCode Solutions Repository**! This repository contains my daily solutions to LeetCode problems. My goal to stay consistent, improve my problem-solving skills, and strengthen my understanding of Data Structures and Algorithms (DSA).
 
@@ -54,7 +54,7 @@ This repository is primarily for my personal learning and progress tracking. How
 
 ## ⭐ Support
 
-If you find this repository helpful or interesting, consider giving it a ⭐. It motivates me to keep learning and sharing my progress.
+If you find this repository helpful or interesting, consider giving it a ⭐. It motivates me to keep learning and sharing my progress..
 
 ---
 
