@@ -43,11 +43,11 @@ More topics will be added as I continue my journey
 * ✅ Improve algorithmic thinking.
 * ✅ Learn multiple approaches to the same problem.
 * ✅ Write optimized and readable solutions.
-* ✅ Prepare for coding interviews and competitive programming.
+* ✅ Prepare for coding interviews & competitive programming.
 
 ## 📊 Progress
 
-I regularly update this repository with new solutions using **LeetSync**, making it easy to keep track of my coding journey.
+I regularly update this repository with new solutions using **LeetSync**, making it easy to keep track of my  coding journey.
 
 ## 🤝 Contributions
 
