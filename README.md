@@ -15,7 +15,7 @@ Welcome **LeetCode Solutions Repository**! This repository contains my daily sol
 Each folder corresponds to a LeetCode problem and contains its solution.
 
 
-## 🧠 Topics Covered
+## 🧠 Topics Covered.   
 
 This repository includes problems from various DSA topics, including:
 
