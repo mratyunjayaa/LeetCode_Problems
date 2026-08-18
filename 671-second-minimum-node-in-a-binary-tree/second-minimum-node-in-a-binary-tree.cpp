@@ -1,26 +1,40 @@
 class Solution {
 public:
     int findSecondMinimumValue(TreeNode* root) {
-        if(root==NULL) return 0;
-       priority_queue<int,vector<int>,greater<int>>pq;
-       queue<TreeNode*>q;
-       q.push(root);
-       while(!q.empty()){
-        int size = q.size();
-        while(size--){
-            TreeNode* curr = q.front(); q.pop();
-            if(curr->left) q.push(curr->left);
-            if(curr->right) q.push(curr->right);
-              pq.push(curr->val);
+        if (root == NULL) return -1;
+
+        priority_queue<int, vector<int>, greater<int>> pq;
+        queue<TreeNode*> q;
+
+        q.push(root);
+
+        while (!q.empty()) {
+            int size = q.size();
+
+            while (size--) {
+                TreeNode* curr = q.front();
+                q.pop();
+
+                pq.push(curr->val);
+
+                if (curr->left)
+                    q.push(curr->left);
+
+                if (curr->right)
+                    q.push(curr->right);
+            }
         }
 
-       }
-       int secMax = -1 ;
-       int firstmax = pq.top() ; pq.pop();
-       while(!pq.empty() && firstmax == pq.top() ){
+        int firstMin = pq.top();
         pq.pop();
-       }
-       if(!pq.empty()) secMax = pq.top();
-       return secMax;
+
+        while (!pq.empty() && pq.top() == firstMin) {
+            pq.pop();
+        }
+
+        if (pq.empty())
+            return -1;
+
+        return pq.top();
     }
 };
