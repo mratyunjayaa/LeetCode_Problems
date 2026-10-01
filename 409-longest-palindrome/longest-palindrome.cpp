@@ -10,7 +10,12 @@ public:
         cout << mp.size();
 
         for (auto it : mp) {
-            count += ((it.second / 2) * 2);
+           if(it.second%2==0){
+            count+=it.second;
+           }
+           else if(it.second > 1 ){
+            count+=it.second-1;
+           }
         }
         if (s.size() > count)
             count++;
