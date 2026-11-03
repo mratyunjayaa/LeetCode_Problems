@@ -6,7 +6,7 @@ class Solution {
 
         int count = 0 ; 
          for(int it : nums){
-            System.out.println(mid-it);
+            // System.out.println(mid-it);
             count+= Math.abs(mid - it);
          }
         return count;
