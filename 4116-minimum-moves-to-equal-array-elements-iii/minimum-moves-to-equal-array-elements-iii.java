@@ -5,9 +5,9 @@ class Solution {
 
         int last = nums.length-1;
 
-        for(int i = 0 ; i < last ; i++){
-            count+= nums[last]-nums[i];
-            System.out.println(count);
+        for(int it : nums){
+            count+= nums[last]-it;
+            // System.out.println(count);
         }
         return count;
     }
