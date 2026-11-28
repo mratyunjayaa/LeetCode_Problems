@@ -5,8 +5,7 @@ public:
         for(auto it : nums) ts+=it;
         int ls = 0 ;
         for(int i = 0 ; i < nums.size() ;i++){
-            int rs = ts-ls-nums[i];
-            if(ls==rs) return i;
+            if(ls==ts-ls-nums[i]) return i;
             ls+=nums[i];
         }
         return -1;
